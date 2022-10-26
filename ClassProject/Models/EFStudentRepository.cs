@@ -1,10 +1,17 @@
 ﻿using System;
+using System.Linq;
+using Microsoft.EntityFrameworkCore;
+
 namespace ClassProject.Models
 {
-    public class EFStudentRepository
+    public class EFStudentRepository : IStudentRepository
     {
-        public EFStudentRepository()
+        private DbContext context { get; set; }
+        public EFStudentRepository(DbContext temp)
         {
+            context = temp;
         }
+
+        public IQueryable<StudentInfo> StudentInfos => context.StudentInfos;
     }
 }

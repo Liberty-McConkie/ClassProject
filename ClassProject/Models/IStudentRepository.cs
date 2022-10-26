@@ -1,10 +1,10 @@
 ﻿using System;
+using System.Linq;
+
 namespace ClassProject.Models
 {
-    public class IStudentRepository
+    public interface IStudentRepository
     {
-        public IStudentRepository()
-        {
-        }
+        IQueryable<StudentInfo> StudentInfos { get; }
     }
 }

@@ -20,7 +20,7 @@ namespace ClassProject.Models
         {
         }
 
-        public virtual DbSet<StudentInfo> Students { get; set; }
+        public virtual DbSet<StudentInfo> StudentInfos { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
