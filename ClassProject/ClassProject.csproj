@@ -5,9 +5,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+<<<<<<< Updated upstream
     <None Remove="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
+=======
+    <None Remove="Microsoft.EntityFrameworkCore" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.30" />
+>>>>>>> Stashed changes
   </ItemGroup>
 </Project>
