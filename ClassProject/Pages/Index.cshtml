@@ -1,6 +1,6 @@
 ﻿@model StudentInfo
 @{
-    ViewData["Title"] = "Student Form";
+    ViewData["Title"] = "Student Employee Form";
 }
 
 <h2>Enter Student Employee's Information:</h2>
@@ -14,17 +14,28 @@
     <label asp-for="LastName">Last Name:</label>
     <input type="text" asp-for="LastName" /><br /><br />
 
-    <label asp-for="International">International? (Y/N):</label>
-    <input type="checkbox" asp-for="International" /><br /><br />
+    <fieldset>
+        <legend>International Student?</legend>
+
+        <div>
+            <input type="checkbox" id="internationalFalse" name="internationalFalse" checked>
+            <label for="false">No</label>
+        </div>
+
+        <div>
+            <input type="checkbox" id="internationalTrue" name="internationalTrue">
+            <label for="true">Yes</label>
+        </div>
+    </fieldset><br /><br />
 
     <label asp-for="Gender">Gender:</label>
     <input type="text" asp-for="Gender" /><br /><br />
 
-    <label asp-for="BowlerCity">City:</label>
-    <input type="text" asp-for="BowlerCity" /><br /><br />
+    <label asp-for="Email">Email:</label>
+    <input type="text" asp-for="Email" /><br /><br />
 
-    <label asp-for="BowlerState">State:</label>
-    <input type="text" asp-for="BowlerState" /><br /><br />
+    <label asp-for="ExpectedHours">Expected Total Hours Per Week:</label>
+    <input type="number" asp-for="ExpectedHours" /><br /><br />
 
     <label asp-for="BowlerZip">Zip Code:</label>
     <input type="text" asp-for="BowlerZip" /><br /><br />
