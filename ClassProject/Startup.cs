@@ -29,7 +29,7 @@ namespace ClassProject
             services.AddDbContext<StudentInfoContext>(options =>
             {
                 //fix this (:
-                options.UseSqlite(Configuration["ConnectionStrings:StudentsDbConnection"]);
+                options.UseSqlite(Configuration.GetConnectionString("StudentsDbConnection"));
             });
         }
 
