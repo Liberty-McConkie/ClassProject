@@ -3,15 +3,56 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 
+
+namespace ClassProject.Models
+{
+
+
+    //contstructor
+    public StudentInfoContext(DbContextOptions<StudentInfoContext> options) : base(options)
+    {
+        //leave blank for now= this is inheritance!
+    }
+
+    //responses= data set (list of data from the database)
+    public DbSet<StudentInfo> StudentInfos { get; set; }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Code scaffolded by EF Core assumes nullable reference types (NRTs) are not used or disabled.
 // If you have enabled NRTs for your project, then un-comment the following line:
 // #nullable disable
 
-namespace ClassProject.Models
-{
     public partial class BookstoreContext : DbContext
     {
-        public DbContext()
+        public StudentInfoContext()
         {
         }
 
@@ -20,7 +61,7 @@ namespace ClassProject.Models
         {
         }
 
-        public virtual DbSet<StudentInfo> Students { get; set; }
+        public virtual DbSet<StudentInfo> StudentInfos { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
