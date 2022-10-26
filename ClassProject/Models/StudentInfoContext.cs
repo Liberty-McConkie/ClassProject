@@ -1,21 +1,21 @@
 ﻿
 using System;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata;
-
 
 namespace ClassProject.Models
 {
 
-
     //contstructor
-    public StudentInfoContext(DbContextOptions<StudentInfoContext> options) : base(options)
+    public class StudentInfoContext : DbContext
     {
-        //leave blank for now= this is inheritance!
-    }
+        public StudentInfoContext(DbContextOptions<StudentInfoContext> options) : base (options)
+        {
 
-    //responses= data set (list of data from the database)
-    public DbSet<StudentInfo> StudentInfos { get; set; }
+        }
+
+    }
+        //responses= data set (list of data from the database)
+        public DbSet<StudentInfo> StudentInfos { get; set; }
 }
 
 
