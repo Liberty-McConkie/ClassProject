@@ -1,10 +1,45 @@
-﻿@page
-@model IndexModel
+﻿@model StudentInfo
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = "Student Form";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<h2>Enter Student Employee's Information:</h2>
+<form method="post">
+    <div asp-validation-summary="All"></div>
+    <input type="hidden" asp-for="EmpID" />
+
+    <label asp-for="FirstName">First Name:</label>
+    <input type="text" asp-for="FirstName" /><br /><br />
+
+    <label asp-for="LastName">Last Name:</label>
+    <input type="text" asp-for="LastName" /><br /><br />
+
+    <label asp-for="International">International? (Y/N):</label>
+    <input type="checkbox" asp-for="International" /><br /><br />
+
+    <label asp-for="Gender">Gender:</label>
+    <input type="text" asp-for="Gender" /><br /><br />
+
+    <label asp-for="BowlerCity">City:</label>
+    <input type="text" asp-for="BowlerCity" /><br /><br />
+
+    <label asp-for="BowlerState">State:</label>
+    <input type="text" asp-for="BowlerState" /><br /><br />
+
+    <label asp-for="BowlerZip">Zip Code:</label>
+    <input type="text" asp-for="BowlerZip" /><br /><br />
+
+    <label asp-for="BowlerPhoneNumber">Phone Number:</label>
+    <input type="text" asp-for="BowlerPhoneNumber" /><br /><br />
+
+    <select class="form-select" asp-for="TeamID">
+        <option value="">Select a Team</option>
+        @foreach (Team t in ViewBag.Teams)
+        {
+            <option value="@t.TeamID">@t.TeamName</option>
+        }
+    </select>
+    <br /><br />
+
+    <button class="btn btn-sm btn-info" type="submit">Save</button>
+</form>
