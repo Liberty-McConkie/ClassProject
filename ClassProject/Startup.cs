@@ -28,7 +28,7 @@ namespace ClassProject
             services.AddControllersWithViews();
             services.AddDbContext<StudentInfoContext>(options =>
             {
-                //fix this (:
+                //fix this (: 
                 options.UseSqlite(Configuration.GetConnectionString("StudentsDbConnection"));
             });
         }
