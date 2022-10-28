@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 namespace ClassProject.Models
 {
 
-    //contstructor
+    //constructor
     public class StudentDbContext : DbContext
     {
         public StudentDbContext(DbContextOptions<StudentDbContext> options) : base (options)
