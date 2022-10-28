@@ -6,9 +6,9 @@ namespace ClassProject.Models
 {
 
     //contstructor
-    public class StudentInfoContext : DbContext
+    public class StudentDbContext : DbContext
     {
-        public StudentInfoContext(DbContextOptions<StudentInfoContext> options) : base (options)
+        public StudentDbContext(DbContextOptions<StudentDbContext> options) : base (options)
         {
 
         }

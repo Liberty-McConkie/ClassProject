@@ -26,10 +26,9 @@ namespace ClassProject
         {
             services.AddRazorPages();
             services.AddControllersWithViews();
-            services.AddDbContext<StudentInfoContext>(options =>
+            services.AddDbContext<StudentDbContext>(options =>
             {
-                //fix this (: 
-                options.UseSqlite(Configuration.GetConnectionString("StudentsDbConnection"));
+                options.UseMySql(Configuration.GetConnectionString("StudentsDbConnection"));
             });
         }
 
@@ -56,7 +55,7 @@ namespace ClassProject
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapRazorPages();
+                endpoints.MapDefaultControllerRoute();
             });
         }
     }
