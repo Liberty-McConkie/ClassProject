@@ -6,12 +6,12 @@ namespace ClassProject.Models
 {
     public class EFStudentRepository : IStudentRepository
     {
-        private StudentInfoContext context { get; set; }
-        public EFStudentRepository(DbContext temp)
+        private StudentInfoContext _context { get; set; }
+        public EFStudentRepository(StudentInfoContext temp)
         {
-            context = temp;
+            _context = temp;
         }
 
-        public IQueryable<StudentInfo> StudentInfos => context.StudentInfos;
+        public IQueryable<StudentInfo> StudentInfos => _context.StudentInfos;
     }
 }
