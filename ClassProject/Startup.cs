@@ -5,6 +5,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using ClassProject.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,7 +30,7 @@ namespace ClassProject
             services.AddControllersWithViews();
             services.AddDbContext<StudentDbContext>(options =>
             {
-                options.UseMySql(Configuration.GetConnectionString("StudentsDbConnection"));
+                options.UseMySQL(Configuration["ConnectionStrings:StudentsDbConnection"]);
             });
         }
 
