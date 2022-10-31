@@ -6,8 +6,8 @@ namespace ClassProject.Models
 {
     public class EFStudentRepository : IStudentRepository
     {
-        private StudentInfoContext _context { get; set; }
-        public EFStudentRepository(StudentInfoContext temp)
+        private StudentDbContext _context { get; set; }
+        public EFStudentRepository(StudentDbContext temp)
         {
             _context = temp;
         }
