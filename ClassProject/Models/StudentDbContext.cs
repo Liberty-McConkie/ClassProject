@@ -1,5 +1,6 @@
 ﻿
 using System;
+using System.Linq;
 using Microsoft.EntityFrameworkCore;
 
 namespace ClassProject.Models
@@ -8,14 +9,13 @@ namespace ClassProject.Models
     //constructor
     public class StudentDbContext : DbContext
     {
-        public StudentDbContext(DbContextOptions<StudentDbContext> options) : base (options)
+        public StudentDbContext(DbContextOptions<StudentDbContext> options) : base(options)
         {
 
         }
 
+        public DbSet<StudentInfo> StudentInfo { get; set; }
     }
-        //responses= data set (list of data from the database)
-        public DbSet<StudentInfo> StudentInfos { get; set; }
 }
 
 
@@ -50,7 +50,7 @@ namespace ClassProject.Models
 // If you have enabled NRTs for your project, then un-comment the following line:
 // #nullable disable
 
-    public partial class BookstoreContext : DbContext
+/*    public partial class BookstoreContext : DbContext
     {
         public StudentInfoContext()
         {
@@ -106,3 +106,4 @@ namespace ClassProject.Models
         partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
     }
 }
+*/
