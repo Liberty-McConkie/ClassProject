@@ -5,33 +5,23 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ClassProject.Models
 {
-
     //constructor
     public class StudentDbContext : DbContext
     {
         public StudentDbContext(DbContextOptions<StudentDbContext> options) : base(options)
         {
-
+            //leave blank
         }
 
         public DbSet<StudentInfo> StudentInfo { get; set; }
     }
 }
+}
+}
+}
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        public DbSet<StudentInfo> StudentInfos { get; set; }
 
 
 
@@ -50,7 +40,7 @@ namespace ClassProject.Models
 // If you have enabled NRTs for your project, then un-comment the following line:
 // #nullable disable
 
-/*    public partial class BookstoreContext : DbContext
+    public partial class BookstoreContext : DbContext
     {
         public StudentInfoContext()
         {
@@ -81,24 +71,8 @@ namespace ClassProject.Models
                 entity.HasIndex(e => e.BookId)
                     .IsUnique();
 
-                entity.Property(e => e.BookId)
-                    .HasColumnName("BookID")
-                    .ValueGeneratedNever();
 
-                entity.Property(e => e.Author).IsRequired();
 
-                entity.Property(e => e.Category).IsRequired();
-
-                entity.Property(e => e.Classification).IsRequired();
-
-                entity.Property(e => e.Isbn)
-                    .IsRequired()
-                    .HasColumnName("ISBN");
-
-                entity.Property(e => e.Publisher).IsRequired();
-
-                entity.Property(e => e.Title).IsRequired();
-            });
 
             OnModelCreatingPartial(modelBuilder);
         }
@@ -106,4 +80,3 @@ namespace ClassProject.Models
         partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
     }
 }
-*/
