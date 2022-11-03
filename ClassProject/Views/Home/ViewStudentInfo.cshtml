@@ -1,0 +1,84 @@
+﻿@{
+    ViewData["Title"] = "Student Records";
+}
+@model List<StudentInfo>
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr class="font-weight-bold">
+                <td>First Name</td>
+                <td>Last Name</td>
+                <td>International</td>
+                <td>Gender</td>
+                <td>Email</td>
+                <td>Expected Hours</td>
+                <td>Semester</td>
+                <td>Year</td>
+                <td>Phone</td>
+                <td>BYU ID</td>
+                <td>Position Type</td>
+                <td>Employee Record</td>
+                <td>Supervisor</td>
+                <td>HireDate</td>
+                <td>Payrate</td>
+                <td>Last Pay Increase</td>
+                <td>Pay Increase Amount</td>
+                <td>Increase Input Date</td>
+                <td>Year In Program</td>
+                <td>Pay Graduate Tuition</td>
+                <td>Name Change Complete</td>
+                <td>Notes</td>
+                <td>Terminated?</td>
+                <td>Termination Date</td>
+                <td>Qualtric Survey</td>
+                <td>submitted Form</td>
+                <td>Authorization To Work Received</td>
+                <td>Authorization To Work Email Sent Date</td>
+                <td>BYU Name</td>
+                <td></td>
+                <td></td>
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach (var i in Model)
+            {
+            <tr>
+                <td>@i.FirstName</td>
+                <td>@i.LastName</td>
+                <td>@i.International</td>
+                <td>@i.Gender</td>
+                <td>@i.Email</td>
+                <td>@i.ExpectedHours</td>
+                <td>@i.Semester</td>
+                <td>@i.Year1</td>
+                <td>@i.Phone</td>
+                <td>@i.ByuId</td>
+                <td>@i.PositionType</td>
+                <td>@i.EmplRecord</td>
+                <td>@i.Supervisor</td>
+                <td>@i.HireDate</td>
+                <td>@i.Payrate</td>
+                <td>@i.LastPayIncrease</td>
+                <td>@i.PayIncreaseAmount</td>
+                <td>@i.IncreaseInputDate</td>
+                <td>@i.YearInProgram</td>
+                <td>@i.PayGradTuition</td>
+                <td>@i.NameChangeCompleted</td>
+                <td>@i.Notes</td>
+                <td>@i.Terminated1</td>
+                <td>@i.TerminationDate</td>
+                <td>@i.QualtricsSurvey</td>
+                <td>@i.SubmittedForm</td>
+                <td>@i.AuthorizationToWorkReceived</td>
+                <td>@i.AuthorizationToWorkEmailSentDate</td>
+                <td>@i.ByuName</td>
+                <td><a asp-controller="Home" asp-action="Edit" asp-route-empid="@i.EmpID">Edit</a></td>
+                <td><a asp-controller="Home" asp-action="Delete" asp-route-empid="@i.EmpID">Delete</a></td>
+            </tr>
+            }
+        </tbody>
+    </table>
+
+    <div>
+        <a class="btn btn-primary" asp-controller="Home" asp-action="NewEmployeeRecord">Back to Form</a>
+    </div>

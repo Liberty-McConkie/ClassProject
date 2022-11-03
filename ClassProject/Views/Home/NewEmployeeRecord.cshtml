@@ -1,0 +1,176 @@
+﻿@{
+    ViewData["Title"] = "New Student Employee record";
+}
+@model StudentInfo
+
+<h1>Fill out a New Student Employee record</h1>
+
+<div>
+    <form method="post">
+        <div asp-validation-summary="All"></div>
+        <input type="hidden" asp-for="EmpID" />
+
+        <label asp-for="FirstName">First Name:</label>
+        <input type="text" asp-for="FirstName" /><br /><br />
+
+        <label asp-for="LastName">Last Name:</label>
+        <input type="text" asp-for="LastName" /><br /><br />
+
+        <fieldset>
+            <legend>International Student?</legend>
+
+            <div>
+                <input asp-for="International" type="checkbox" value="False" name="internationalFalse" checked>
+                <label asp-for="International">No</label>
+            </div>
+
+            <div>
+                <input asp-for="International" value="True" type="checkbox" name="internationalTrue">
+                <label asp-for="International">Yes</label>
+            </div>
+        </fieldset><br /><br />
+
+        <label asp-for="Gender">Gender:</label>
+        <input type="text" asp-for="Gender" /><br /><br />
+
+        <label asp-for="Email">Email:</label>
+        <input type="text" asp-for="Email" /><br /><br />
+
+        <label asp-for="ExpectedHours">Expected Total Hours Per Week:</label>
+        <input type="number" asp-for="ExpectedHours" /><br /><br />
+
+        <label asp-for="Semester">Semester:</label>
+        <input type="text" asp-for="Semester" /><br /><br />
+
+        <label asp-for="Year1">Year:</label>
+        <input type="date" asp-for="Year1" /><br /><br />
+
+        <label asp-for="Phone">Phone Number:</label>
+        <input type="text" asp-for="Phone" /><br /><br />
+
+        <label asp-for="ByuId">BYU ID Number:</label>
+        <input type="number" asp-for="ByuId" /><br /><br />
+
+        <label asp-for="PositionType">Position Type:</label>
+        <input type="text" asp-for="PositionType" /><br /><br />
+
+        <label asp-for="ClassCode">Class Code:</label>
+        <input type="number" asp-for="ClassCode" /><br /><br />
+
+        <label asp-for="EmplRecord">Employee Record Number:</label>
+        <input type="number" asp-for="EmplRecord" /><br /><br />
+
+        <label asp-for="Supervisor">Supervisor:</label>
+        <input type="text" asp-for="Supervisor" /><br /><br />
+
+        <label asp-for="HireDate">Hire Date:</label>
+        <input type="date" asp-for="HireDate" /><br /><br />
+
+        <label asp-for="Payrate">Pay Rate:</label>
+        <input type="number" asp-for="Payrate" /><br /><br />
+
+        <label asp-for="LastPayIncrease">Last Pay Increase:</label>
+        <input type="date" asp-for="LastPayIncrease" /><br /><br />
+
+        <label asp-for="PayIncreaseAmount">Pay Increase Amount:</label>
+        <input type="number" asp-for="PayIncreaseAmount" /><br /><br />
+
+        <label asp-for="IncreaseInputDate">Date of Increase Input:</label>
+        <input type="date" asp-for="IncreaseInputDate" /><br /><br />
+
+        <label asp-for="YearInProgram">Year In Program:</label>
+        <input type="text" asp-for="YearInProgram" /><br /><br />
+
+        <fieldset>
+            <legend>Paid Graduate Tuition?</legend>
+
+            <div>
+                <input asp-for="PayGradTuition" type="checkbox" value="True" name="payGradTuitionTrue">
+                <label asp-for="PayGradTuition">Yes</label>
+            </div>
+
+            <div>
+                <input asp-for="PayGradTuition" type="checkbox" value="False" name="payGradTuitionFalse" checked>
+                <label asp-for="PayGradTuition">No</label>
+            </div>
+
+        </fieldset><br /><br />
+
+        <fieldset>
+            <legend>Name Change Completed?</legend>
+
+            <div>
+                <input asp-for="NameChangeCompleted" type="checkbox" value="True" name="nameChangeTrue">
+                <label asp-for="NameChangeCompleted">Yes</label>
+            </div>
+
+            <div>
+                <input asp-for="NameChangeCompleted" value="False" type="checkbox" name="nameChangeFalse" checked>
+                <label asp-for="NameChangeCompleted">No</label>
+            </div>
+
+        </fieldset><br /><br />
+
+        <label asp-for="Notes">Notes:</label>
+        <input type="text" asp-for="Notes" /><br /><br />
+
+        <fieldset>
+            <legend>Terminated?</legend>
+
+            <div>
+                <input asp-for="Terminated1" type="checkbox" value="True" name="terminatedTrue">
+                <label asp-for="Terminated1">Yes</label>
+            </div>
+
+            <div>
+                <input asp-for="Terminated1" value="False" type="checkbox" name="terminatedFalse" checked>
+                <label asp-for="Terminated1">No</label>
+            </div>
+
+        </fieldset><br /><br />
+
+        <label asp-for="TerminationDate">Termination Date:</label>
+        <input type="date" asp-for="TerminationDate" /><br /><br />
+
+        <label asp-for="QualtricsSurvey">Qualtrics Survey:</label>
+        <input type="text" asp-for="QualtricsSurvey" /><br /><br />
+
+        <fieldset>
+            <legend>Submitted Form?</legend>
+
+            <div>
+                <input asp-for="SubmittedForm" type="checkbox" value="True" name="submittedFormTrue">
+                <label asp-for="SubmittedForm">Yes</label>
+            </div>
+
+            <div>
+                <input asp-for="SubmittedForm" value="False" type="checkbox" name="submittedFormFalse" checked>
+                <label asp-for="SubmittedForm">No</label>
+            </div>
+
+        </fieldset><br /><br />
+
+        <fieldset>
+            <legend>Authorization To Work Received?</legend>
+
+            <div>
+                <input asp-for="AuthorizationToWorkReceived" type="checkbox" value="True" name="authReceivedTrue">
+                <label asp-for="AuthorizationToWorkReceived">Yes</label>
+            </div>
+
+            <div>
+                <input asp-for="AuthorizationToWorkReceived" value="False" type="checkbox" name="authReceivedFalse" checked>
+                <label asp-for="AuthorizationToWorkReceived">No</label>
+            </div>
+
+        </fieldset><br /><br />
+
+        <label asp-for="AuthorizationToWorkEmailSentDate">Date Authorization To Work Email Was Sent:</label>
+        <input type="date" asp-for="AuthorizationToWorkEmailSentDate" /><br /><br />
+
+        <label asp-for="ByuName">Name In BYU's Records:</label>
+        <input type="text" asp-for="ByuName" /><br /><br />
+
+        <button class="btn btn-sm btn-info" type="submit">Submit</button>
+    </form>
+</div>

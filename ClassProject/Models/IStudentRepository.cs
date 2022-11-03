@@ -5,6 +5,9 @@ namespace ClassProject.Models
 {
     public interface IStudentRepository
     {
-        IQueryable<StudentInfo> StudentInfos { get; }
+        IQueryable<StudentInfo> StudentInfo { get; }
+        public void AddStudent(StudentInfo si);
+        public void UpdateStudent(StudentInfo si);
+        public void DeleteStudent(StudentInfo si);
     }
 }

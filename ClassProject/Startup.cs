@@ -11,6 +11,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore;
 
 namespace ClassProject
 {
@@ -30,8 +31,9 @@ namespace ClassProject
             services.AddControllersWithViews();
             services.AddDbContext<StudentDbContext>(options =>
             {
-                options.UseMySQL(Configuration["ConnectionStrings:StudentsDbConnection"]);
+                options.UseMySql(Configuration["ConnectionStrings:StudentsDbConnection"]);
             });
+            services.AddScoped<IStudentRepository, EFStudentRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -57,7 +59,9 @@ namespace ClassProject
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapDefaultControllerRoute();
+                endpoints.MapControllerRoute(
+                    name: "default",
+                    pattern: "{controller=Home}/{action=Index}/{id}");
             });
         }
     }
