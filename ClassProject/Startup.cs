@@ -31,7 +31,7 @@ namespace ClassProject
             services.AddControllersWithViews();
             services.AddDbContext<StudentDbContext>(options =>
             {
-                options.UseMySql(Configuration["ConnectionStrings:StudentsDbConnection"]);
+                options.UseMySql(Configuration["ConnectionStrings:LibbyDbConnection"]);
             });
             services.AddScoped<IStudentRepository, EFStudentRepository>();
         }
@@ -61,7 +61,7 @@ namespace ClassProject
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id}");
+                    pattern: "{controller=Home}/{action=Index}/{id?}");
             });
         }
     }
