@@ -28,14 +28,14 @@ namespace ClassProject.Models
         public float? PayIncreaseAmount { get; set; }
         public DateTime? IncreaseInputDate { get; set; }
         public string? YearInProgram { get; set; }
-        public bool? PayGradTuition { get; set; }
-        public bool? NameChangeCompleted { get; set; }
+        public bool PayGradTuition { get; set; }
+        public bool NameChangeCompleted { get; set; }
         public string? Notes { get; set; }
-        public bool? Terminated1 { get; set; }
+        public bool Terminated1 { get; set; }
         public DateTime? TerminationDate { get; set; }
         public string? QualtricsSurvey { get; set; }
-        public bool? SubmittedForm { get; set; }
-        public bool? AuthorizationToWorkReceived { get; set; }
+        public bool SubmittedForm { get; set; }
+        public bool AuthorizationToWorkReceived { get; set; }
         public DateTime? AuthorizationToWorkEmailSentDate { get; set; }
         public string? ByuName { get; set; }
     }
