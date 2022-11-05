@@ -11,7 +11,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore.Infrastructure;
-using Microsoft.EntityFrameworkCore;
 
 namespace ClassProject
 {
@@ -31,7 +30,9 @@ namespace ClassProject
             services.AddControllersWithViews();
             services.AddDbContext<StudentDbContext>(options =>
             {
-                options.UseMySql(Configuration["ConnectionStrings:LibbyDbConnection"]);
+                //options.UseMySql(Configuration["ConnectionStrings:LibbyDbConnection"]);
+                options.UseMySql(Configuration["ConnectionStrings:ZacDbConnection"]);
+
             });
             services.AddScoped<IStudentRepository, EFStudentRepository>();
         }
