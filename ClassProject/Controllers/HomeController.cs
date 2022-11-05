@@ -23,7 +23,41 @@ namespace ClassProject.Controllers
         }
         public IActionResult Index()
         {
-            return View();
+            var average = _repo.StudentInfo
+                .Select(x => x.Payrate).Average();
+
+            var taAverage = _repo.StudentInfo
+                .Where(x => x.PositionType == "TA")
+                .Select(x => x.Payrate).Average();
+
+            var raAverage = _repo.StudentInfo
+                .Where(x => x.PositionType == "RA")
+                .Select(x => x.Payrate).Average();
+
+            var officeAverage = _repo.StudentInfo
+                .Where(x => x.PositionType == "Office")
+                .Select(x => x.Payrate).Average();
+
+            var stInstAverage = _repo.StudentInfo
+                .Where(x => x.PositionType == "Student Instructor")
+                .Select(x => x.Payrate).Average();
+
+            var otherAverage = _repo.StudentInfo
+                .Where(x => x.PositionType == "Other")
+                .Select(x => x.Payrate).Average();
+
+            var ivm = new IndexViewModel
+            {
+                avgPay = Math.Round((decimal)average, 2),
+                taAvgPay = Math.Round((decimal)taAverage, 2),
+                raAvgPay = Math.Round((decimal)raAverage, 2),
+                officeAvgPay = Math.Round((decimal)officeAverage, 2),
+                stInstAvgPay = Math.Round((decimal)stInstAverage, 2),
+                otherAvgPay = Math.Round((decimal)otherAverage, 2)
+
+            };
+
+            return View(ivm);
         }
         public IActionResult ViewStudentInfo()
         {

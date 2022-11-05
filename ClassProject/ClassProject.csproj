@@ -8,6 +8,7 @@
     <None Remove="Models\" />
     <None Remove="Microsoft.EntityFrameworkCore" />
     <None Remove="MySql.Data.EntityFrameworkCore" />
+    <None Remove="OfficeOpenXml.Extention.AspNetCore" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
@@ -24,5 +25,6 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="3.2.7" />
+    <PackageReference Include="OfficeOpenXml.Extention.AspNetCore" Version="1.0.0" />
   </ItemGroup>
 </Project>

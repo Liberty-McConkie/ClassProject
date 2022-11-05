@@ -10,88 +10,139 @@
         <div asp-validation-summary="All"></div>
         <input type="hidden" asp-for="EmpID" />
 
-        <label asp-for="FirstName">First Name:</label>
-        <input type="text" asp-for="FirstName" /><br /><br />
+        <legend asp-for="FirstName" class="form-label">First Name:</legend>
+        <input type="text" asp-for="FirstName" class="form-control" /><br /><br />
 
-        <label asp-for="LastName">Last Name:</label>
-        <input type="text" asp-for="LastName" /><br /><br />
+        <legend asp-for="LastName" class="form-label">Last Name:</legend>
+        <input type="text" asp-for="LastName" class="form-control" /><br /><br />
 
         <fieldset>
             <legend>International Student?</legend>
 
             <div>
-                <input asp-for="International" type="checkbox" value="False" name="internationalFalse" checked>
-                <label asp-for="International">No</label>
+                <input asp-for="International" type="checkbox" value=0 name="internationalFalse" checked>
+                <label asp-for="International" class="form-label">No</label>
             </div>
 
             <div>
-                <input asp-for="International" value="True" type="checkbox" name="internationalTrue">
-                <label asp-for="International">Yes</label>
+                <input asp-for="International" value=1 type="checkbox" name="internationalTrue">
+                <label asp-for="International" class="form-label">Yes</label>
             </div>
         </fieldset><br /><br />
 
-        <label asp-for="Gender">Gender:</label>
-        <input type="text" asp-for="Gender" /><br /><br />
+        <legend asp-for="Gender" class="form-label">Gender:</legend>
+        <select class="form-select form-control" asp-for="Gender">
+            <option value="">Select Gender</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+        </select><br /><br />
 
-        <label asp-for="Email">Email:</label>
-        <input type="text" asp-for="Email" /><br /><br />
+        <legend asp-for="Email" class="form-label">Email:</legend>
+        <input type="text" asp-for="Email" class="form-control" /><br /><br />
 
-        <label asp-for="ExpectedHours">Expected Total Hours Per Week:</label>
-        <input type="number" asp-for="ExpectedHours" /><br /><br />
+        <legend asp-for="ExpectedHours" class="form-label">Expected Total Hours Per Week:</legend>
+        <input type="number" asp-for="ExpectedHours" class="form-control" /><br /><br />
 
-        <label asp-for="Semester">Semester:</label>
-        <input type="text" asp-for="Semester" /><br /><br />
+        <legend asp-for="Semester" class="form-label">Semester:</legend>
+        <select class="form-select form-control" asp-for="Semester">
+            <option value="">Select Semester</option>
+            <option value="Fall">Fall</option>
+            <option value="Winter">Winter</option>
+            <option value="Spring">Spring</option>
+            <option value="Summer">Summer</option>
+        </select><br /><br />
 
-        <label asp-for="Year1">Year:</label>
-        <input type="text" asp-for="Year1" /><br /><br />
+        <legend asp-for="Year1" class="form-label">Year:</legend>
+        <select class="form-select form-control" asp-for="Year1">
+            <option value="">Select Year</option>
+            <option value="2020">2020</option>
+            <option value="2021">2021</option>
+            <option value="2022">2022</option>
+            <option value="2023">2023</option>
+            <option value="2024">2024</option>
+            <option value="2025">2025</option>
+            <option value="2026">2026</option>
+            <option value="2027">2027</option>
+            <option value="2028">2028</option>
+            <option value="2029">2029</option>
+        </select><br /><br />
 
-        <label asp-for="Phone">Phone Number:</label>
-        <input type="text" asp-for="Phone" /><br /><br />
+        <legend asp-for="Phone" class="form-label">Phone Number:</legend>
+        <input type="text" asp-for="Phone" class="form-control" /><br /><br />
 
-        <label asp-for="ByuId">BYU ID Number:</label>
-        <input type="number" asp-for="ByuId" /><br /><br />
+        <legend asp-for="ByuId" class="form-label">BYU ID Number:</legend>
+        <input type="number" asp-for="ByuId" class="form-control" /><br /><br />
 
-        <label asp-for="PositionType">Position Type:</label>
-        <input type="text" asp-for="PositionType" /><br /><br />
+        <legend asp-for="PositionType" class="form-label">Position Type:</legend>
+        <select class="form-select form-control" asp-for="PositionType">
+            <option value="">Select Position Type</option>
+            <option value="TA">TA</option>
+            <option value="RA">RA</option>
+            <option value="Office">Office</option>
+            <option value="Student Instructor">Student Instructor</option>
+            <option value="Other">Other</option>
+        </select><br /><br />
 
-        <label asp-for="ClassCode">Class Code:</label>
-        <input type="number" asp-for="ClassCode" /><br /><br />
+        <legend asp-for="ClassCode" class="form-label">Class Code:</legend>
+        <input type="number" asp-for="ClassCode" class="form-control" /><br /><br />
 
-        <label asp-for="EmplRecord">Employee Record Number:</label>
-        <input type="number" asp-for="EmplRecord" /><br /><br />
+        <legend asp-for="EmplRecord" class="form-label">Employee Record Number:</legend>
+        <select class="form-select form-control" asp-for="EmplRecord">
+            <option value="">Select Employee Record Number</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+        </select><br /><br />
 
-        <label asp-for="Supervisor">Supervisor:</label>
-        <input type="text" asp-for="Supervisor" /><br /><br />
+        <legend asp-for="Supervisor" class="form-label">Supervisor:</legend>
+        <select class="form-select form-control" asp-for="Supervisor">
+            <option value="">Select Supervisor</option>
+            <option value="Stephen Liddle">Stephen Liddle</option>
+            <option value="Taylor Wells">Taylor Wells</option>
+            <option value="Ryan Schuetzler">Ryan Schuetzler</option>
+            <option value="Nathan Twyman">Nathan Twyman</option>
+            <option value="Spencer Hilton">Spencer Hilton</option>
+        </select><br /><br />
 
-        <label asp-for="HireDate">Hire Date:</label>
-        <input type="date" asp-for="HireDate" /><br /><br />
+        <legend asp-for="HireDate" class="form-label">Hire Date:</legend>
+        <input type="date" asp-for="HireDate" class="form-control" /><br /><br />
 
-        <label asp-for="Payrate">Pay Rate:</label>
-        <input type="number" asp-for="Payrate" /><br /><br />
+        <legend asp-for="Payrate" class="form-label">Pay Rate:</legend>
+        <input type="number" asp-for="Payrate" class="form-control" /><br /><br />
 
-        <label asp-for="LastPayIncrease">Last Pay Increase:</label>
-        <input type="date" asp-for="LastPayIncrease" /><br /><br />
+        <legend asp-for="LastPayIncrease" class="form-label">Last Pay Increase:</legend>
+        <input type="date" asp-for="LastPayIncrease" class="form-control" /><br /><br />
 
-        <label asp-for="PayIncreaseAmount">Pay Increase Amount:</label>
-        <input type="number" asp-for="PayIncreaseAmount" /><br /><br />
+        <legend asp-for="PayIncreaseAmount" class="form-label">Pay Increase Amount:</legend>
+        <input type="number" asp-for="PayIncreaseAmount" class="form-control" /><br /><br />
 
-        <label asp-for="IncreaseInputDate">Date of Increase Input:</label>
-        <input type="date" asp-for="IncreaseInputDate" /><br /><br />
+        <legend asp-for="IncreaseInputDate" class="form-label">Date of Increase Input:</legend>
+        <input type="date" asp-for="IncreaseInputDate" class="form-control" /><br /><br />
 
-        <label asp-for="YearInProgram">Year In Program:</label>
-        <input type="text" asp-for="YearInProgram" /><br /><br />
+        <legend asp-for="YearInProgram" class="form-label">Year In Program:</legend>
+        <select class="form-select form-control" asp-for="YearInProgram">
+            <option value="">Select Year In Program</option>
+            <option value="MSB Core">MSB Core (IS or Other)</option>
+            <option value="MISM">MISM</option>
+            <option value="MBA">MBA</option>
+            <option value="MPA">MPA</option>
+            <option value="Macc">Macc</option>
+            <option value="Other">Other majors on campus</option>
+        </select><br /><br />
 
         <fieldset>
             <legend>Paid Graduate Tuition?</legend>
 
             <div>
                 <input asp-for="PayGradTuition" type="checkbox" value=1 name="payGradTuitionTrue">
-                <label asp-for="PayGradTuition">Yes</label>
+                <label asp-for="PayGradTuition" class="form-label">Yes</label>
             </div>
 
             <div>
                 <input asp-for="PayGradTuition" type="checkbox" value=0 name="payGradTuitionFalse" checked>
-                <label asp-for="PayGradTuition">No</label>
+                <label asp-for="PayGradTuition" class="form-label">No</label>
             </div>
 
         </fieldset><br /><br />
@@ -101,51 +152,55 @@
 
             <div>
                 <input asp-for="NameChangeCompleted" type="checkbox" value=1 name="nameChangeTrue">
-                <label asp-for="NameChangeCompleted">Yes</label>
+                <label asp-for="NameChangeCompleted" class="form-label">Yes</label>
             </div>
 
             <div>
                 <input asp-for="NameChangeCompleted" value=0 type="checkbox" name="nameChangeFalse" checked>
-                <label asp-for="NameChangeCompleted">No</label>
+                <label asp-for="NameChangeCompleted" class="form-label">No</label>
             </div>
 
         </fieldset><br /><br />
 
-        <label asp-for="Notes">Notes:</label>
-        <input type="text" asp-for="Notes" /><br /><br />
+        <legend asp-for="Notes" class="form-label">Notes:</legend>
+        <input type="text" asp-for="Notes" class="form-control" /><br /><br />
 
         <fieldset>
             <legend>Terminated?</legend>
 
             <div>
                 <input asp-for="Terminated1" type="checkbox" value=1 name="terminatedTrue">
-                <label asp-for="Terminated1">Yes</label>
+                <label asp-for="Terminated1" class="form-label">Yes</label>
             </div>
 
             <div>
                 <input asp-for="Terminated1" value=0 type="checkbox" name="terminatedFalse" checked>
-                <label asp-for="Terminated1">No</label>
+                <label asp-for="Terminated1" class="form-label">No</label>
             </div>
 
         </fieldset><br /><br />
 
-        <label asp-for="TerminationDate">Termination Date:</label>
-        <input type="date" asp-for="TerminationDate" /><br /><br />
+        <legend asp-for="TerminationDate" class="form-label">Termination Date:</legend>
+        <input type="date" asp-for="TerminationDate" class="form-control" /><br /><br />
 
-        <label asp-for="QualtricsSurvey">Qualtrics Survey:</label>
-        <input type="text" asp-for="QualtricsSurvey" /><br /><br />
+        <legend asp-for="QualtricsSurvey" class="form-label">Qualtrics Survey:</legend>
+        <select class="form-select form-control" asp-for="QualtricsSurvey">
+            <option value="">Select Yes or No</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select><br /><br />
 
         <fieldset>
             <legend>Submitted Form?</legend>
 
             <div>
                 <input asp-for="SubmittedForm" type="checkbox" value=1 name="submittedFormTrue">
-                <label asp-for="SubmittedForm">Yes</label>
+                <label asp-for="SubmittedForm" class="form-label">Yes</label>
             </div>
 
             <div>
                 <input asp-for="SubmittedForm" value=0 type="checkbox" name="submittedFormFalse" checked>
-                <label asp-for="SubmittedForm">No</label>
+                <label asp-for="SubmittedForm" class="form-label">No</label>
             </div>
 
         </fieldset><br /><br />
@@ -155,21 +210,21 @@
 
             <div>
                 <input asp-for="AuthorizationToWorkReceived" type="checkbox" value=1 name="authReceivedTrue">
-                <label asp-for="AuthorizationToWorkReceived">Yes</label>
+                <label asp-for="AuthorizationToWorkReceived" class="form-label">Yes</label>
             </div>
 
             <div>
                 <input asp-for="AuthorizationToWorkReceived" value=0 type="checkbox" name="authReceivedFalse" checked>
-                <label asp-for="AuthorizationToWorkReceived">No</label>
+                <label asp-for="AuthorizationToWorkReceived" class="form-label">No</label>
             </div>
 
         </fieldset><br /><br />
 
-        <label asp-for="AuthorizationToWorkEmailSentDate">Date Authorization To Work Email Was Sent:</label>
-        <input type="date" asp-for="AuthorizationToWorkEmailSentDate" /><br /><br />
+        <legend asp-for="AuthorizationToWorkEmailSentDate" class="form-label">Date Authorization To Work Email Was Sent:</legend>
+        <input type="date" asp-for="AuthorizationToWorkEmailSentDate" class="form-control" /><br /><br />
 
-        <label asp-for="ByuName">Name In BYU's Records:</label>
-        <input type="text" asp-for="ByuName" /><br /><br />
+        <legend asp-for="ByuName" class="form-label">Name In BYU's Records:</legend>
+        <input type="text" asp-for="ByuName" class="form-control" /><br /><br />
 
         <button class="btn btn-sm btn-info" type="submit">Submit</button>
     </form>
