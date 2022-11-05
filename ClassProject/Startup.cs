@@ -31,7 +31,7 @@ namespace ClassProject
             services.AddDbContext<StudentDbContext>(options =>
             {
                 //options.UseMySql(Configuration["ConnectionStrings:LibbyDbConnection"]);
-                options.UseMySql(Configuration["ConnectionStrings:ZacDbConnection"]);
+                options.UseMySql(Configuration["ConnectionStrings:LibbyDbConnection"]);
 
             });
             services.AddScoped<IStudentRepository, EFStudentRepository>();
