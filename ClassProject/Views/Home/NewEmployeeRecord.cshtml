@@ -20,12 +20,12 @@
             <legend>International Student?</legend>
 
             <div>
-                <input asp-for="International" type="checkbox" value=0 name="internationalFalse" checked>
+                <input asp-for="International" type="radio" value=0 name="internationalFalse" checked>
                 <label asp-for="International" class="form-label">No</label>
             </div>
 
             <div>
-                <input asp-for="International" value=1 type="checkbox" name="internationalTrue">
+                <input asp-for="International" value=1 type="radio" name="internationalTrue">
                 <label asp-for="International" class="form-label">Yes</label>
             </div>
         </fieldset><br /><br />
@@ -104,6 +104,19 @@
             <option value="Ryan Schuetzler">Ryan Schuetzler</option>
             <option value="Nathan Twyman">Nathan Twyman</option>
             <option value="Spencer Hilton">Spencer Hilton</option>
+            <option value="Lara Burton">Lara Burton</option>
+            <option value="Bonnie Anderson">Bonnie Anderson</option>
+            <option value="Greg Anderson">Greg Anderson</option>
+            <option value="James Gaskin">James Gaskin</option>
+            <option value="Jeff Jenkins">Jeff Jenkins</option>
+            <option value="Mark Keith">Mark Keith</option>
+            <option value="Degan Kettles">Degan Kettles</option>
+            <option value="Thomas Meservy">Thomas Meservy</option>
+            <option value="Caroline Thorne">Caroline Thorne</option>
+            <option value="Ashlyn Lewis">Ashlyn Lewis</option>
+            <option value="Katy Reese">Katy Reese</option>
+            <option value="Gove Allen">Gove Allen</option>
+            <option value="Rob Hilton">Rob Hilton</option>
         </select><br /><br />
 
         <legend asp-for="HireDate" class="form-label">Hire Date:</legend>
@@ -136,12 +149,12 @@
             <legend>Paid Graduate Tuition?</legend>
 
             <div>
-                <input asp-for="PayGradTuition" type="checkbox" value=1 name="payGradTuitionTrue">
+                <input asp-for="PayGradTuition" type="radio" value=1 name="payGradTuitionTrue">
                 <label asp-for="PayGradTuition" class="form-label">Yes</label>
             </div>
 
             <div>
-                <input asp-for="PayGradTuition" type="checkbox" value=0 name="payGradTuitionFalse" checked>
+                <input asp-for="PayGradTuition" type="radio" value=0 name="payGradTuitionFalse" checked>
                 <label asp-for="PayGradTuition" class="form-label">No</label>
             </div>
 
@@ -151,12 +164,12 @@
             <legend>Name Change Completed?</legend>
 
             <div>
-                <input asp-for="NameChangeCompleted" type="checkbox" value=1 name="nameChangeTrue">
+                <input asp-for="NameChangeCompleted" type="radio" value=1 name="nameChangeTrue">
                 <label asp-for="NameChangeCompleted" class="form-label">Yes</label>
             </div>
 
             <div>
-                <input asp-for="NameChangeCompleted" value=0 type="checkbox" name="nameChangeFalse" checked>
+                <input asp-for="NameChangeCompleted" value=0 type="radio" name="nameChangeFalse" checked>
                 <label asp-for="NameChangeCompleted" class="form-label">No</label>
             </div>
 
@@ -169,12 +182,12 @@
             <legend>Terminated?</legend>
 
             <div>
-                <input asp-for="Terminated1" type="checkbox" value=1 name="terminatedTrue">
+                <input asp-for="Terminated1" type="radio" value=1 name="terminatedTrue">
                 <label asp-for="Terminated1" class="form-label">Yes</label>
             </div>
 
             <div>
-                <input asp-for="Terminated1" value=0 type="checkbox" name="terminatedFalse" checked>
+                <input asp-for="Terminated1" value=0 type="radio" name="terminatedFalse" checked>
                 <label asp-for="Terminated1" class="form-label">No</label>
             </div>
 
@@ -194,12 +207,12 @@
             <legend>Submitted Form?</legend>
 
             <div>
-                <input asp-for="SubmittedForm" type="checkbox" value=1 name="submittedFormTrue">
+                <input asp-for="SubmittedForm" type="radio" value=1 name="submittedFormTrue">
                 <label asp-for="SubmittedForm" class="form-label">Yes</label>
             </div>
 
             <div>
-                <input asp-for="SubmittedForm" value=0 type="checkbox" name="submittedFormFalse" checked>
+                <input asp-for="SubmittedForm" value=0 type="radio" name="submittedFormFalse" checked>
                 <label asp-for="SubmittedForm" class="form-label">No</label>
             </div>
 
@@ -209,12 +222,12 @@
             <legend>Authorization To Work Received?</legend>
 
             <div>
-                <input asp-for="AuthorizationToWorkReceived" type="checkbox" value=1 name="authReceivedTrue">
+                <input asp-for="AuthorizationToWorkReceived" type="radio" value=1 name="authReceivedTrue">
                 <label asp-for="AuthorizationToWorkReceived" class="form-label">Yes</label>
             </div>
 
             <div>
-                <input asp-for="AuthorizationToWorkReceived" value=0 type="checkbox" name="authReceivedFalse" checked>
+                <input asp-for="AuthorizationToWorkReceived" value=0 type="radio" name="authReceivedFalse" checked>
                 <label asp-for="AuthorizationToWorkReceived" class="form-label">No</label>
             </div>
 
