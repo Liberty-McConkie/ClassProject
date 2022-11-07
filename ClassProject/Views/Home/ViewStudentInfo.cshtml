@@ -1,10 +1,11 @@
 ﻿@{
     ViewData["Title"] = "Student Records";
+    Layout = "_StudentInfoLayout";
 }
 @model List<StudentInfo>
     <table class="table table-bordered table-striped">
         <thead>
-            <tr class="font-weight-bold">
+            <tr class="font-weight-bold" style="color:darkgrey">
                 <td>First Name</td>
                 <td>Last Name</td>
                 <td>International</td>
@@ -39,7 +40,7 @@
             </tr>
         </thead>
 
-        <tbody>
+        <tbody style="color:darkgrey">
             @foreach (var i in Model)
             {
             <tr>
@@ -80,8 +81,5 @@
     </table>
 
     <div>
-        <a href="@Url.Action("ExportToExcel","Home")">Export Current Employees</a><br />
-        <a href="@Url.Action("AllEmpExportToExcel","Home")">Export All Employees</a><br />
-        <a href="@Url.Action("EmpExportBySupervisorToExcel","Home")">Export Employees By Supervisor</a><br />
-        <a class="btn btn-primary" asp-controller="Home" asp-action="NewEmployeeRecord">Back to Form</a>
+        
     </div>

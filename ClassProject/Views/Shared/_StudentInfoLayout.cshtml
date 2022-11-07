@@ -1,0 +1,95 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Student Info</title>
+    
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/index.css" />
+    <link rel="stylesheet" href="~/css/StyleSheet.css" />
+
+    
+
+</head>
+<body>
+
+    <div id="wrapper" class="d-flex">
+        <!-- Sidebar -->
+        <ul class="navbar-nav bg-light sidebar sidebar-dark accordion" id="accordionSidebar">
+
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+                <div class="sidebar-brand-icon rotate-n-15">
+                    <i class="fas fa-laugh-wink"></i>
+                </div>
+                <div class="sidebar-brand-text mx-3" style="color:black">Student Info</div>
+            </a>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item active">
+                <a class="nav-link nav-item" style="color:darkblue"asp-controller="Home" asp-action="Index">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Home</span>
+                </a>
+            </li>
+            
+            <li class="nav-item active">
+                <a class="nav-link nav-fill"style="color:darkblue" asp-controller="Home" asp-action="NewEmployeeRecord">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Create New Employee</span>
+                </a>
+            </li>
+            
+            
+            <li class="nav-item active">
+                <a class="nav-link nav-fill"style="color:darkblue" href="@Url.Action("ExportToExcel","Home")">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Export Current Employees</span>
+                </a>
+            </li>
+            
+            <li class="nav-item active">
+                <a class="nav-link nav-fill" style="color:darkblue" href="@Url.Action("AllEmpExportToExcel","Home")">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Export All Employees</span>
+                </a>
+            </li>
+            
+            <li class="nav-item active">
+                <a class="nav-link nav-fill"style="color:darkblue" href="@Url.Action("EmpExportBySupervisorToExcel","Home")">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Export Employees By Supervisor</span>
+                </a>
+            </li>
+
+        </ul>
+        <!-- End of Sidebar -->
+       
+        <main role="main" class="pb-3 w-100">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+    
+</body>
+</html>
+
