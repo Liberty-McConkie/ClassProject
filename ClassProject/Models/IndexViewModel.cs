@@ -13,6 +13,7 @@ namespace ClassProject.Models
         public decimal officeAvgPay { get; set; }
         public decimal stInstAvgPay { get; set; }
         public decimal otherAvgPay { get; set; }
+        public Array empNeedEmail { get; set; }
     }
 }
 

@@ -49,6 +49,10 @@ namespace ClassProject.Controllers
                 .Where(x => x.PositionType == "Other")
                 .Select(x => x.Payrate).Average();
 
+            var needEmail = _repo.StudentInfo
+                .Where(x => x.AuthorizationToWorkReceived == false)
+                .Select(x => x.FirstName + " " + x.LastName).ToArray();
+
             var ivm = new IndexViewModel
             {
                 avgPay = Math.Round((decimal)average, 2),
@@ -57,7 +61,8 @@ namespace ClassProject.Controllers
                 officeAvgPay = Math.Round((decimal)officeAverage, 2),
                 stInstAvgPay = Math.Round((decimal)stInstAverage, 2),
                 otherAvgPay = Math.Round((decimal)otherAverage, 2),
-                empCountMath = Math.Round((decimal)empCount,2)
+                empCountMath = Math.Round((decimal)empCount,2),
+                empNeedEmail = needEmail.ToArray()
 
             };
 

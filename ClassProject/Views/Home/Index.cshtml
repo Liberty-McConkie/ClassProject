@@ -147,8 +147,12 @@
     <div class="col-md-4">
         <div class="position-sticky" style="top: 2rem;">
             <div class="p-4 mb-3 bg-light rounded">
-                <h4 class="fst-italic"><a asp-area="" asp-controller="Home" asp-action="Privacy" style="text-decoration: underline">Notifications</a></h4>
-                <p class="mb-0 text-dark">Notifications and To-Do items will be listed here.</p>
+                <h4 class="fst-italic">Notifications</h4>
+                <p class="mb-0 text-dark">
+                    <b>@Model.empNeedEmail.GetValue(0)</b> needs to be sent an email for authorization. <br /><br />
+                    <b>@Model.empNeedEmail.GetValue(1)</b> needs to be sent an email for authorization. <br /><br />
+                    <b>@Model.empNeedEmail.GetValue(2)</b> needs to be sent an email for authorization. <br /><br />
+                </p>
             </div>
 
         </div>
