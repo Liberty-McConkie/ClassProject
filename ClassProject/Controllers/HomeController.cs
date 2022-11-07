@@ -56,7 +56,8 @@ namespace ClassProject.Controllers
                 raAvgPay = Math.Round((decimal)raAverage, 2),
                 officeAvgPay = Math.Round((decimal)officeAverage, 2),
                 stInstAvgPay = Math.Round((decimal)stInstAverage, 2),
-                otherAvgPay = Math.Round((decimal)otherAverage, 2)
+                otherAvgPay = Math.Round((decimal)otherAverage, 2),
+                empCountMath = Math.Round((decimal)empCount,2)
 
             };
 

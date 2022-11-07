@@ -3,6 +3,8 @@ namespace ClassProject.Models
 {
     public class IndexViewModel
     {
+        internal decimal empCountMath;
+
         public StudentInfo studentInfo { get; set; }
 
         public decimal avgPay { get; set; }
