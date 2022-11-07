@@ -30,8 +30,8 @@ namespace ClassProject
             services.AddControllersWithViews();
             services.AddDbContext<StudentDbContext>(options =>
             {
-                //options.UseMySql(Configuration["ConnectionStrings:LibbyDbConnection"]);
-                options.UseMySql(Configuration["ConnectionStrings:StudentDbConnection"]);
+                options.UseMySql(Configuration["ConnectionStrings:LibbyDbConnection"]);
+                //options.UseMySql(Configuration["ConnectionStrings:StudentDbConnection"]);
 
             });
             services.AddScoped<IStudentRepository, EFStudentRepository>();
