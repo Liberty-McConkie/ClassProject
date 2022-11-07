@@ -26,6 +26,9 @@ namespace ClassProject.Controllers
             var average = _repo.StudentInfo
                 .Select(x => x.Payrate).Average();
 
+            var empCount = _repo.StudentInfo
+                .Select(x => x.EmpID).Count();
+
             var taAverage = _repo.StudentInfo
                 .Where(x => x.PositionType == "TA")
                 .Select(x => x.Payrate).Average();
